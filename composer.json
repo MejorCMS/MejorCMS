@@ -4,7 +4,7 @@
 	"keywords": ["CMS", "MejorCMS","Laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+
 	},
 
 	"config": {
