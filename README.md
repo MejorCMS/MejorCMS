@@ -25,3 +25,6 @@ MejorCMS, buscar ser un alternativa que destaque por ser un CMS:
     </li>
     .
 </ul>
+
+<h2>Instalacion</h2>
+composer create-project mejor-cms/mejor-cms "project-name"
