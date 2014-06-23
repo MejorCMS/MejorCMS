@@ -13,8 +13,9 @@ MejorCMS, buscar ser un alternativa que destaque por ser un CMS:
     <li>
         Rápido
     </li>
-        Adaptable
+
     <li>
+     Adaptable
     </li>
     <li>
         Extensible
