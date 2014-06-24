@@ -2,10 +2,13 @@
 	"name": "mejor/cms",
 	"description": "CMS creado por los alumnos del curso Profesional de Laravel de Mejorando.la",
 	"keywords": ["MejorCMS", "laravel","CMS"],
-	"license": "MIT",
+	"license": "GPL",
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
+    "require-dev": {
+        "way/generators": "2.*"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
