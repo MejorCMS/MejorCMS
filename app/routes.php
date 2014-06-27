@@ -15,7 +15,9 @@
 
 
 Route::get('backend/login', ['as'=>'getLogin',      'uses'=>'LoginController@getLogin']);
-Route::post('backend/login',['as'=>'postRegister',  'uses'=>'LoginController@postLogin']);
+Route::post('register', ['as'=>'postLogin',     'uses'=>'LoginController@postRegister']);
+
+
 /*
  * Rutas del administrador de MejorCMS 
  */
@@ -26,5 +28,5 @@ Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     });
     Route::get('logout',    ['as'=>'logout',        'uses'=>'LoginController@logout']);
     Route::get('register',  ['as'=>'getRegister',   'uses'=>'LoginController@getRegister']);
-    Route::post('register', ['as'=>'postLogin',     'uses'=>'LoginController@postRegister']);
+    Route::post('backend/login',['as'=>'postRegister',  'uses'=>'LoginController@postLogin']);
 });
