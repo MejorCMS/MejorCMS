@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * LoginController
+ * Creado el 27 de julio de 2014
+ */
 class LoginController extends BaseController {
 
     public function getRegister(){
@@ -48,7 +51,6 @@ class LoginController extends BaseController {
                 }
             }
             catch(\Exception $e){
-
                 return Response::json(array(
                     'success' =>false,
                     'msg'     => $e->getMessage()
