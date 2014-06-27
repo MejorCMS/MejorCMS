@@ -49,7 +49,7 @@ class LoginController extends BaseController {
                 }
             }
             catch(\Exception $e){
-                //return Redirect::to('backend/login')->withErrors(array('login'=>$e->getMessage()));
+
                 return Response::json(array(
                     'success' =>false,
                     'msg'     => $e->getMessage()
