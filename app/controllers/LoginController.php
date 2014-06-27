@@ -33,7 +33,6 @@ class LoginController extends BaseController {
         }
     }
     public function postLogin(){
-        if(Request::ajax()){
             $credentials=array(
                 'email'=>Input::json('email'),
                 'password'=>Input::json('password')
@@ -56,8 +55,7 @@ class LoginController extends BaseController {
                     )
                 );
             }
-        }
-    }
+     }
     public function logout(){
         Sentry::logout();
         return Response::json(array(
