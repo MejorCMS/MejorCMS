@@ -11,7 +11,20 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+
+
+
+Route::get('backend/login', ['as'=>'getLogin',      'uses'=>'LoginController@getLogin']);
+Route::post('backend/login',['as'=>'postRegister',  'uses'=>'LoginController@postLogin']);
+/*
+ * Rutas del administrador de MejorCMS 
+ */
+Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
+    Route::get('/', function()
+    {
+        return View::make('hello');
+    });
+    Route::get('logout',    ['as'=>'logout',        'uses'=>'LoginController@logout']);
+    Route::get('register',  ['as'=>'getRegister',   'uses'=>'LoginController@getRegister']);
+    Route::post('register', ['as'=>'postLogin',     'uses'=>'LoginController@postRegister']);
 });
