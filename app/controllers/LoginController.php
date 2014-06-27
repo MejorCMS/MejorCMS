@@ -12,10 +12,10 @@ class LoginController extends BaseController {
         if(Request::ajax()){
             try{
                 $user=Sentry::createUser(array(
-                    'first_name'    =>Input::get('first_name'),
-                    'last_name'     =>Input::get('last_name'),
-                    'email'         =>Input::get('email'),
-                    'password'      =>Input::get('password'),
+                    'first_name'    =>Input::json('first_name'),
+                    'last_name'     =>Input::json('last_name'),
+                    'email'         =>Input::json('email'),
+                    'password'      =>Input::json('password'),
                     'activated'     =>true,
                 ));
                 return Response::json(array(
@@ -35,8 +35,8 @@ class LoginController extends BaseController {
     public function postLogin(){
         if(Request::ajax()){
             $credentials=array(
-                'email'=>Input::get('email'),
-                'password'=>Input::get('password')
+                'email'=>Input::json('email'),
+                'password'=>Input::json('password')
             );
             try{
                 $user=Sentry::authenticate($credentials, false);
