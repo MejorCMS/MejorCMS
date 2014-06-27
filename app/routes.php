@@ -17,7 +17,7 @@
 Route::get('backend/login', ['as'=>'getLogin',      'uses'=>'LoginController@getLogin']);
 Route::post('register', ['as'=>'postLogin',     'uses'=>'LoginController@postRegister']);
 /*
- * Rutas del administrador de MejorCMS 
+ * Rutas del administrador de MejorCMS
  */
 Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     Route::get('/', function()
@@ -27,4 +27,9 @@ Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     Route::get('logout',    ['as'=>'logout',        'uses'=>'LoginController@logout']);
     Route::get('register',  ['as'=>'getRegister',   'uses'=>'LoginController@getRegister']);
     Route::post('backend/login',['as'=>'postRegister',  'uses'=>'LoginController@postLogin']);
+});
+
+
+Route::get('prueba', function (){
+   return "jojojoo";
 });
