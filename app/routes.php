@@ -16,8 +16,6 @@
 
 Route::get('backend/login', ['as'=>'getLogin',      'uses'=>'LoginController@getLogin']);
 Route::post('register', ['as'=>'postLogin',     'uses'=>'LoginController@postRegister']);
-
-
 /*
  * Rutas del administrador de MejorCMS 
  */
