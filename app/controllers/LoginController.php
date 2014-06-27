@@ -45,7 +45,7 @@ class LoginController extends BaseController {
                         'success' =>true,
                         'msg'     =>'successful login'
                     ));
-                    //return Redirect::to('backend/');
+
                 }
             }
             catch(\Exception $e){
