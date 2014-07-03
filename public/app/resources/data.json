@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "nombre": "Israel Parra",
+        "profesion": "Programador Web"
+
+    },
+    {
+        "id": 1,
+        "nombre": "Pepe",
+        "profesion": "Diseñador Web"
+
+    },
+    {
+        "id": 2,
+        "nombre": "Juan",
+        "profesion": "Multimedia"
+
+    }
+]

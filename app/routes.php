@@ -12,12 +12,10 @@
 */
 
 
-
-
 Route::get('backend/login', ['as'=>'getLogin',      'uses'=>'LoginController@getLogin']);
 Route::post('backend/login', ['as'=>'postLogin',         'uses'=>'LoginController@postLogin']);
 /*
- * Rutas del administrador de MejorCMS 
+ * Rutas del administrador de MejorCMS
  */
 Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     Route::get('/', function()
@@ -27,4 +25,16 @@ Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     Route::get('logout',    ['as'=>'logout',            'uses'=>'LoginController@logout']);
     Route::get('register',  ['as'=>'getRegister',       'uses'=>'LoginController@getRegister']);
     Route::post('register',['as'=>'postRegister',  'uses'=>'LoginController@postRegister']);
+});
+
+/**
+ * Rutas para angularJS by Kelvin
+ */
+
+Route::get('/', function (){
+   return "pagina para los visitantes";
+});
+
+Route::get('admin', function (){
+   return View::make('backend/singlepage');
 });
