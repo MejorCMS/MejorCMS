@@ -37,8 +37,8 @@ class LoginController extends BaseController {
     }
     public function postLogin(){
             $credentials=array(
-                'email'=>Input::json('email'),
-                'password'=>Input::json('password')
+                'email'=>Input::get('email'),
+                'password'=>Input::get('password')
             );
             try{
                 $user=Sentry::authenticate($credentials, false);
@@ -46,7 +46,7 @@ class LoginController extends BaseController {
                     return Response::json(array(
                         'success' =>true,
                         'msg'     =>'successful login'
-                    ));
+                    ),500);
 
                 }
             }

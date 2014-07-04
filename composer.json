@@ -8,10 +8,14 @@
         "cartalyst/sentry": "2.1.*"
 	},
     "require-dev": {
-        "way/generators": "2.*"
+        "way/generators": "2.*",
+        "fzaninotto/faker": "v1.3.0"
 
     },
 	"autoload": {
+        "psr-4":{
+           "MejorCMS\\":"app/MejorCMS"
+    },
 		"classmap": [
 			"app/commands",
 			"app/controllers",

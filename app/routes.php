@@ -24,7 +24,13 @@ Route::group(array('prefix' => 'backend','before' => 'auth'), function(){
     {
         return View::make('hello');
     });
-    Route::get('logout',    ['as'=>'logout',            'uses'=>'LoginController@logout']);
-    Route::get('register',  ['as'=>'getRegister',       'uses'=>'LoginController@getRegister']);
+    Route::get('logout',    ['as'=>'logout',       'uses'=>'LoginController@logout']);
+    Route::get('register',  ['as'=>'getRegister',  'uses'=>'LoginController@getRegister']);
     Route::post('register',['as'=>'postRegister',  'uses'=>'LoginController@postRegister']);
 });
+
+/*
+ * RUTAS DEL FRON-END
+ *
+ */
+Route::get('/',['as'=>'home','uses'=>'Frontend_MainController@home']);
