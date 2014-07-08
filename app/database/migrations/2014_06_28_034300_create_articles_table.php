@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration {
             $table->text('content');
             $table->integer('category_id')->unsigned();
             $table->boolean('published');
-            $table->boolean('outstanding');//articulo destacado que se mostrar en el Home
+            $table->boolean('featured');//articulo destacado que se mostrar en el Home
             $table->integer('user_id')->unsigned();
             $table->string('slug');
             $table->foreign('category_id')

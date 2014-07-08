@@ -5,12 +5,14 @@
  * Date: 29/06/14
  * Time: 09:00 PM
  */
-
-namespace MerjorCMS\Repositories;
-use MerjorCMS\Entities\Article;
-use MerjorCMS\Entities\Category;
-
-
+namespace MejorCMS\Repositories;
+use MejorCMS\Entities\Article;
+use MejorCMS\Entities\Category;
 class Articles {
+    public function featuredArticles(){
+        $data=Article::where('featured','=',true)->get();
+        return $data;
+    }
+
 
 } 

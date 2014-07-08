@@ -19,7 +19,7 @@ class ArticlesTableSeeder extends \Seeder {
                 'content'       =>$faker->text(300),
                 'category_id'   =>$faker->randomElement([1,2]),
                 'published'     =>true,
-                'outstanding'   =>$faker->randomElement([true,false]),
+                'featured'   =>$faker->randomElement([true,false]),
                 'user_id'       =>1,
                 'slug'          =>\Str::slug($titleFaker)
 			]);
