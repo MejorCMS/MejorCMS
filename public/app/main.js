@@ -14,6 +14,10 @@ require.config({
    }
 });
 
-require(['angular', 'routes/routes'], function(angular, mainRoutes){
+/**
+ *  indicamos que inicie la aplicacion y
+ *  el modulo que ocuparemos ("app")
+ */
+require(['angular', 'routes/routes', 'config/config', 'config/run'], function(angular, mainRoutes){
    return angular.bootstrap(document, ['app']);
 });

@@ -1,4 +1,4 @@
-define(['modules/app'], function(app){
+define(['modules/app', 'factories/SessionService', 'factories/FlashService'], function(app){
 
    app.factory('AuthenticationService', function($http, $sanitize, $location, SessionService, FlashService, CSRF_TOKEN){
       var cacheSession = function(){
@@ -21,7 +21,7 @@ define(['modules/app'], function(app){
 
       return {
          login: function(credentials){
-            var login.$http.post('auth/login', sanitizeCredentials(credentials));
+            var login = $http.post('auth/login', sanitizeCredentials(credentials));
             login.success(cacheSession);
             login.success(FlashService.clear);
             login.error(loginError);
