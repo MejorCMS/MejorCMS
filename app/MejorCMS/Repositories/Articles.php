@@ -10,7 +10,7 @@ use MejorCMS\Entities\Article;
 use MejorCMS\Entities\Category;
 class Articles {
     public function featuredArticles(){
-        $data=Article::where('featured','=',true)->get();
+        $data=Article::where('featured','=',true,'and','published','=','true')->paginate();
         return $data;
     }
 

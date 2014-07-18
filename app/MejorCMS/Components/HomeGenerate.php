@@ -21,9 +21,21 @@ class HomeGenerate {
         foreach($articles as $article){
             $url='article/'.$article->slug.'/'.$article->id;
             $data=$data.
-                HtmlGenerate::article([
+                    HtmlGenerate::article([
                     HtmlGenerate::link($url,HtmlGenerate::title(2,$article->title)),
-                    HtmlGenerate::div($article->content)
+                    HtmlGenerate::div(
+                        'Categoria:'.
+                        HtmlGenerate::link(
+                            '',
+                            $article->category->title)
+                        ),
+                    HtmlGenerate::div(
+                        'Autor:'.
+                        HtmlGenerate::link(
+                            '',
+                            $article->user->first_name)
+                    ),
+                    HtmlGenerate::div($article->content),
                 ]);
         }
         return $data;

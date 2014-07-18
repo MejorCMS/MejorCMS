@@ -7,7 +7,7 @@ class Frontend_MainController extends \BaseController {
         $this->template = $template;
     }
     public function home(){
-       $this->template->getTemplate('demo');
+       $this->template->getTemplate('demo2');
        $data=$this->template->render();
         return View::make('system.index',compact('data'));
     }
