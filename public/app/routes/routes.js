@@ -1,4 +1,4 @@
-define(['modules/app', 'controllers/HomeController', 'controllers/LoginController', 'controllers/CategoryController'], function(app){
+define(['modules/app', 'controllers/HomeController', 'controllers/LoginController', 'controllers/CategoryController', 'controllers/ArticleController'], function(app){
    return app.config(['$routeProvider',function($routeProvider) {
 
       $routeProvider.when('/home', {
@@ -12,6 +12,10 @@ define(['modules/app', 'controllers/HomeController', 'controllers/LoginControlle
       .when('/categories', {
          controller: 'CategoryController',
          templateUrl: './app/templates/categories.html'
+      })
+      .when('/articles', {
+          controller: 'ArticleController',
+          templateUrl:'./app/templates/articles.html'
       });
 
       $routeProvider.otherwise({ redirectTo: '/login' });

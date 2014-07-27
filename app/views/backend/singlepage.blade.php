@@ -23,7 +23,7 @@
      <div class="collapse navbar-collapse">
        <ul class="nav navbar-nav">
          <li class="active"><a href="#/home">Home</a></li>
-         <li><a href="#post">Posts</a></li>
+         <li><a href="#/articles">Articles</a></li>
          <li><a href="#contact">Contact</a></li>
          <li><a href="#/categories">Categories</a></li>
        </ul>
