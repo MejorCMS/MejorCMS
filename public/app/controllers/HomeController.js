@@ -1,8 +1,7 @@
-define(['modules/app', 'factories/userFactory'], function(app){
+define(['modules/app'], function(app){
 
-   app.controller('HomeController', ['$scope', 'User', function($scope, User){
+   app.controller('HomeController', ['$scope', function($scope){
       $scope.ctrl = 'HomeController';
-      $scope.usuarios = User.getUsers();
    }]);
 
 });
